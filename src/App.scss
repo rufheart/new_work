@@ -4,7 +4,17 @@
     box-sizing: border-box;
 }
 
+
+
+
 .active{
-    background-color: red;
-    border: 1px solid blue;
+    &>div{
+        background-color: red;
+    }
+}
+.current{
+    &>div{
+        background-color: red;
+        border: 1px solid red;
+    }   
 }

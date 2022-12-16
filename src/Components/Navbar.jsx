@@ -6,48 +6,31 @@ function Navbar(){
 
 
     return(
-        <div>
-            <ul>
-                <NavLink>
-                    <li>
+        <div className="navbar">
+            <div className="chat_list_header">
+
+            </div>
+            <div className="chat_list_body">
+                <NavLink to='/' activeClassName="current">
+                    <div>
                         <div>
-                            <div>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <p>Userin adi</p>
-                                <p>Mesajin bir hisessi</p>
-                            </div>
+                            <div>Tipi</div>
+                            <div>Istifadeci adi</div>
+                            <div><img src="" alt="" /></div>
                         </div>
-                    </li>
+                        <div></div>
+                    </div>
                 </NavLink>
-                <NavLink>
-                    <li>
-                        <div>
-                            <div>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <p>Userin adi</p>
-                                <p>Mesajin bir hisessi</p>
-                            </div>
-                        </div>
-                    </li>
+                <NavLink to='/login' activeClassName="current">
+                    <div>
+                        <div>Tipi</div>
+                        <div>Istifadeci adi</div>
+                        <div><img src="" alt="" /></div>
+                    </div>
+                    <div></div>
+
                 </NavLink>
-                <NavLink>
-                    <li>
-                        <div>
-                            <div>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <p>Userin adi</p>
-                                <p>Mesajin bir hisessi</p>
-                            </div>
-                        </div>
-                    </li>
-                </NavLink>
-            </ul>
+            </div>
         </div>
     )
 }
