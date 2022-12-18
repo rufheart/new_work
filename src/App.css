@@ -2,13 +2,4 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
-
-.active > div {
-  background-color: red;
-}
-
-.current > div {
-  background-color: red;
-  border: 1px solid red;
 }/*# sourceMappingURL=App.css.map */

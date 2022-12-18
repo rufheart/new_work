@@ -5,6 +5,52 @@
 }
 
 .navbar {
-  border: 1px solid red;
-  width: 50%;
+  width: 25%;
+}
+.navbar > div:nth-child(1) > div {
+  display: flex;
+  border: 1px solid blue;
+  padding: 5px;
+  width: 100%;
+}
+.navbar > div:nth-child(1) > div > div:nth-child(1):hover {
+  cursor: pointer;
+}
+.navbar > div:nth-child(1) > div > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.navbar > div:nth-child(1) > div > div:nth-child(1) > i {
+  font-size: 25px;
+  color: #707579;
+}
+.navbar > div:nth-child(1) > div > div:nth-child(2) {
+  margin-left: 20px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+.navbar > div:nth-child(1) > div > div:nth-child(2) > i {
+  position: absolute;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 100;
+  color: #3390ec;
+}
+.navbar > div:nth-child(1) > div > div:nth-child(2) > input {
+  border: none;
+  padding: 15px;
+  outline: none;
+  background-color: #f4f4f5;
+  border-radius: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 45px;
+}
+.navbar > div:nth-child(2) {
+  margin-top: 10px;
+}
+.active > div {
+  background-color: #3390ec;
+  border-radius: 10px;
 }/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.message {
+  width: 75%;
+  border: 1px solid blue;
+  height: 967px;
+}
+.message > div:nth-child(1) {
+  width: 100%;
+  border: 1px solid blue;
+  display: flex;
+  padding: 5px;
+}
+.message > div:nth-child(1) > div:hover {
+  cursor: pointer;
+}
+.message > div:nth-child(1) > div:nth-child(1) {
+  width: 50%;
+  margin-left: 25px;
+  display: flex;
+}
+.message > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.message > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.message > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: right;
+}
+.message > div:nth-child(1) > div:nth-child(2) > i {
+  margin: 0px 15px;
+  display: flex;
+}
+.message > div:nth-child(1) > div:nth-child(2) > i:nth-child(1) {
+  font-size: 18px;
+  color: #707579;
+}
+.message > div:nth-child(1) > div:nth-child(2) > i:nth-child(2) {
+  font-size: 18px;
+  color: #707579;
+}/*# sourceMappingURL=Message_Side.css.map */
