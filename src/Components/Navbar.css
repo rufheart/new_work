@@ -50,6 +50,36 @@
 .navbar > div:nth-child(2) {
   margin-top: 10px;
 }
+.navbar > div:nth-child(2) > div {
+  padding: 5px;
+}
+.navbar > div:nth-child(2) > div > a > div {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+}
+.navbar > div:nth-child(2) > div > a > div > div {
+  display: flex;
+  align-items: center;
+}
+.navbar > div:nth-child(2) > div > a > div > div > div:nth-child(1) {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.navbar > div:nth-child(2) > div > a > div > div > div:nth-child(1) > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.navbar > div:nth-child(2) > div > a > div > div > div:nth-child(2) {
+  margin-left: 10px;
+}
+
+.navchat > a > div > div:nth-child(2) {
+  display: none;
+}
+
 .active > div {
   background-color: #3390ec;
   border-radius: 10px;

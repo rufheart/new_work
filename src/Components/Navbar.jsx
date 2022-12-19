@@ -1,13 +1,16 @@
-import React from "react";
+import React  from "react";
+import {useRef} from 'react';
 import { NavLink } from "react-router-dom";
 import './Navbar.css'
 import { useState } from "react";
 import { useContext } from "react";
 import { Context } from "./Context";
+import Messages from "./Messsage_Side";
 
 
 
 function Navbar(){
+
     let [ic, setIc] = useState('fa fa-bars')
     let {deyer} = useContext(Context)
     console.log(deyer,'navbars')
@@ -17,6 +20,9 @@ function Navbar(){
 
     function reverse(){
         setIc('fa fa-bars')
+    }
+    function navclick(){
+
     }
 
     return(
@@ -34,31 +40,61 @@ function Navbar(){
             </div>
             <div className="chat_list_body">
                 {deyer.map((value, index)=>{
+                    
                     return(
-                        <NavChat value={value} key={index}/>
+                        <div>
+                            <NavChat value={value} />
+                            {/* <NavLink to='/' activeclassname="current" onClick={navclick}>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <img src={require('../sekil.jpg')} alt="" />
+                                        </div>
+                                        <div>
+                                            <div></div>
+                                            <div>{value.username}</div>
+                                        </div>
+                                    </div>
+                                    <div></div>
+                                </div>
+                            </NavLink>  */}
+                        </div>
+                        
                     )
                 })}
-                <NavChat/>
+                
             </div>
         </div>
     )
 }
 
-function NavChat(value){
+function NavChat({value}){
+    let ref = useRef(null)
     console.log(value,'navchat')
+    let [sref, setSref] = useState()
+    function navclick(){
+        console.log(ref.current)
+        setSref(ref.current.outerText)
+    }
+    console.log(value.id)
+
     return(
-        <NavLink to='/' activeclassname="current">
-            <div>
+        <div className="navchat">
+            <NavLink to='/' activeclassname="current" onClick={navclick} ref={ref}>
                 <div>
-                    <div></div>
-                    <div>{value.username}</div>
-                    <div><img src="" alt="" /></div>
+                    <div>
+                        <div></div>
+                        <div>{value.username}</div>
+                        <div><img src="" alt="" /></div>
+                    </div>
+                    <div>
+                        <Messages value={sref}/>
+                    </div>
                 </div>
-                <div></div>
-            </div>
-        </NavLink> 
+            </NavLink> 
+        </div>
     )
 }
 
-export {NavChat}
+
 export default Navbar;
