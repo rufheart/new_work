@@ -13,7 +13,6 @@ function Navbar(){
 
     let [ic, setIc] = useState('fa fa-bars')
     let {deyer} = useContext(Context)
-    console.log(deyer,'navbars')
     function change(){
         setIc('fa fa-arrow-left')
     }
@@ -69,14 +68,21 @@ function Navbar(){
 }
 
 function NavChat({value}){
+    let {deyer} = useContext(Context)
     let ref = useRef(null)
-    console.log(value,'navchat')
-    let [sref, setSref] = useState()
+    let [sref, setSref] = useState(false)
     function navclick(){
-        console.log(ref.current)
-        setSref(ref.current.outerText)
+        for(let i of deyer){
+            // console.log(i)
+            if(i.username == ref.current.outerText){
+                setSref(i.id);
+                // console.log(i)
+                
+            }
+        }
+        // setSref([])
     }
-    console.log(value.id)
+    // console.log(sref,'sref')
 
     return(
         <div className="navchat">
@@ -87,9 +93,7 @@ function NavChat({value}){
                         <div>{value.username}</div>
                         <div><img src="" alt="" /></div>
                     </div>
-                    <div>
-                        <Messages value={sref}/>
-                    </div>
+                    {sref==false?null:<Messages value={sref}/>}
                 </div>
             </NavLink> 
         </div>
